@@ -1,0 +1,17 @@
+version: '2.4'
+
+services:
+  db:
+    image: mongo:4.2.3
+    container_name: db
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+    restart: always
+    networks:
+      - back
+
+networks:
+  back:
+    driver: bridge

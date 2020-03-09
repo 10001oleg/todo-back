@@ -1,0 +1,55 @@
+{
+    "name": "backend-todo",
+    "version": "0.0.1",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon",
+        "build": "NODE_ENV=production node -r @babel/register './node_modules/.bin/webpack' --config=./webpack/webpack.config.js",
+        "test": "jest --no-cache --verbose --detectOpenHandles --forceExit --projects 'jest/jest.test.config.json'",
+        "lint:eslint": "jest --projects 'jest/jest.eslint.config.json'"
+    },
+    "engines": {
+        "node": ">=12"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.8.7",
+        "@babel/plugin-proposal-class-properties": "^7.8.3",
+        "@babel/preset-env": "^7.8.7",
+        "@babel/register": "^7.8.6",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-eslint": "^10.1.0",
+        "babel-jest": "^25.1.0",
+        "babel-loader": "^8.0.6",
+        "babel-preset-jest": "^25.1.0",
+        "eslint": "^6.8.0",
+        "eslint-plugin-import": "^2.20.1",
+        "faker": "^4.1.0",
+        "jest": "^25.1.0",
+        "jest-runner-eslint": "^0.7.6",
+        "mongo-unit": "^2.0.0",
+        "nodemon": "^2.0.2",
+        "supertest": "^4.0.2",
+        "webpack": "^4.42.0",
+        "webpack-bundle-analyzer": "^3.6.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-merge": "^4.2.2",
+        "webpack-node-externals": "^1.7.2"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "debug": "^4.1.1",
+        "dotenv": "^8.2.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "express": "^4.17.1",
+        "express-rate-limit": "^5.1.1",
+        "helmet": "^3.21.3",
+        "jsonwebtoken": "^8.5.1",
+        "moment": "^2.24.0",
+        "mongoose": "^5.9.3",
+        "mongoose-unique-validator": "^2.0.3",
+        "pem": "^1.14.4",
+        "uuid": "^7.0.2"
+    }
+}
